@@ -1,9 +1,7 @@
 import { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
 
-const images = [
-  'https://cdn.poehali.dev/projects/8d520a54-8896-4fab-9c6f-c6b040a1605e/bucket/f2cb30e1-e292-4410-b2fb-fe70cc5a1147.png',
-];
+const IMAGE_URL = 'https://cdn.poehali.dev/projects/8d520a54-8896-4fab-9c6f-c6b040a1605e/bucket/a5a0a3ae-f024-4d83-be8e-202a83a29cb1.png';
 
 export default function HeroSection() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -16,13 +14,13 @@ export default function HeroSection() {
     <section className="relative h-screen w-full overflow-hidden bg-black">
       <div className="absolute inset-0">
         <img
-          src={images[0]}
+          src={IMAGE_URL}
           alt="Шевалева Оксана"
-          className="h-full w-full object-cover object-[center_20%]"
+          className="h-full w-full object-cover object-top"
         />
       </div>
 
-      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
 
       <div className="relative z-10 flex h-full items-end">
         <div className="container mx-auto px-8 md:px-16 pb-16 md:pb-24">
@@ -37,6 +35,11 @@ export default function HeroSection() {
             </p>
             <p className="mt-3 text-xl font-light text-white/80 md:text-2xl tracking-widest uppercase">
               Эксперт по ИИ
+            </p>
+            <p className="mt-5 max-w-lg text-base md:text-lg text-white/70 font-light leading-relaxed">
+              Работаю с личными проектами, экспертами, творческими людьми и малым бизнесом.
+              <br className="hidden md:block" />
+              Говорю простым языком и показываю, как ИИ можно использовать в жизни и работе: спокойно и без перегруза.
             </p>
 
             <div className="flex gap-6 pt-6">
